@@ -1,0 +1,22 @@
+/* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+/* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+@-ms-viewport {
+  width: 100vw ;
+  zoom: 100% ;
+}
+@viewport {
+  width: 100vw ;
+  zoom: 100% ;
+}
+@-ms-viewport {
+  user-zoom: fixed ;
+}
+@viewport {
+  user-zoom: fixed ;
+}
+
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
