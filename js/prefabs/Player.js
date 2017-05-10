@@ -115,14 +115,14 @@ Bomberboy.Player.prototype.try_dropping_bomb = function () {
   }
 };
 
-Bomberboy.Player.prototype.drop_bomb = function () {
+Bomberboy.Player.prototype.drop_bomb = function (position) {
   "use strict";
   var bomb, bomb_name, bomb_position, bomb_properties;
   // Get the first dead bomb from the pool.
   bomb_name = this.name + "_bomb_" + this.game_state.groups.bombs.countLiving(); // Define bomb name.
   bomb_position = new Phaser.Point(this.x, this.y); // Define bomb position as position of the player.
   bomb_properties = {"texture": "bomb_spritesheet", "group": "bombs", bomb_radius: 3, owner: this};
-  bomb = Bomberboy.create_prefab_from_pool(this.game_state.groups.bombs, Bomberboy.Bomb.prototype.constructor, this.game_state, bomb_name, bomb_position, bomb_properties);
+  bomb = Bomberboy.create_prefab_from_pool(this.game_state.groups.bombs, Bomberboy.Bomb.prototype.constructor, this.game_state, bomb_name, position, bomb_properties);
   this.current_bomb_index += 1; // Increment the current bomb index.
 };
 

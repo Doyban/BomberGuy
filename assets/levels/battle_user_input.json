@@ -1,0 +1,71 @@
+{
+  "keydown": {
+    "W": {
+      "callback": "game_state.change_movement",
+      "args": [
+        0,
+        -1,
+        true
+      ]
+    },
+    "S": {
+      "callback": "game_state.change_movement",
+      "args": [
+        0,
+        1,
+        true
+      ]
+    },
+    "A": {
+      "callback": "game_state.change_movement",
+      "args": [-1,
+        0,
+        true
+      ]
+    },
+    "D": {
+      "callback": "game_state.change_movement",
+      "args": [1,
+        0,
+        true
+      ]
+    },
+    "Z": {
+      "callback": "game_state.try_dropping_bomb"
+    }
+  },
+  "keyup": {
+    "W": {
+      "callback": "game_state.change_movement",
+      "args": [
+        0,
+        -1,
+        false
+      ]
+    },
+    "S": {
+      "callback": "game_state.change_movement",
+      "args": [
+        0,
+        1,
+        false
+      ]
+    },
+    "A": {
+      "callback": "game_state.change_movement",
+      "args": [
+        -1,
+        0,
+        false
+      ]
+    },
+    "D": {
+      "callback": "game_state.change_movement",
+      "args": [
+        1,
+        0,
+        false
+      ]
+    }
+  }
+}
